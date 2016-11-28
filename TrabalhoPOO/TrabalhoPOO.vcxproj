@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E6A076AD-FB4B-48AE-9E0D-290A7A1E93FC}</ProjectGuid>
+    <ProjectGuid>{1433C1A5-2507-4709-AE0A-A8E67F587997}</ProjectGuid>
     <RootNamespace>TrabalhoPOO</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
