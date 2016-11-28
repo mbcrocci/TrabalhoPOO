@@ -110,17 +110,52 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Building.cpp" />
+    <ClCompile Include="Armor.cpp" />
+    <ClCompile Include="BuildingAggression.cpp" />
+    <ClCompile Include="BuildingSeeker.cpp" />
+    <ClCompile Include="Castle.cpp" />
+    <ClCompile Include="Colony.cpp" />
+    <ClCompile Include="Command.cpp" />
+    <ClCompile Include="Dagger.cpp" />
+    <ClCompile Include="Farm.cpp" />
     <ClCompile Include="Flag.cpp" />
+    <ClCompile Include="HealthPot.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="MonsterAggression.cpp" />
+    <ClCompile Include="MonsterSeeker.cpp" />
+    <ClCompile Include="MoreHealth.cpp" />
+    <ClCompile Include="SecondChance.cpp" />
+    <ClCompile Include="Student.cpp" />
+    <ClCompile Include="Sword.cpp" />
+    <ClCompile Include="ToughSkin.cpp" />
     <ClCompile Include="Tower.cpp" />
+    <ClCompile Include="Walker.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Armor.h" />
     <ClInclude Include="Building.h" />
+    <ClInclude Include="BuildingAggression.h" />
+    <ClInclude Include="BuildingSeeker.h" />
+    <ClInclude Include="Castle.h" />
+    <ClInclude Include="Colony.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="Dagger.h" />
+    <ClInclude Include="Farm.h" />
     <ClInclude Include="Flag.h" />
+    <ClInclude Include="HealthPot.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="MonsterAggression.h" />
+    <ClInclude Include="MonsterSeeker.h" />
+    <ClInclude Include="MoreHealth.h" />
+    <ClInclude Include="SecondChance.h" />
+    <ClInclude Include="Student.h" />
+    <ClInclude Include="Sword.h" />
+    <ClInclude Include="ToughSkin.h" />
     <ClInclude Include="Tower.h" />
+    <ClInclude Include="Walker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

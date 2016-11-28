@@ -1,16 +1,17 @@
 #pragma once
 #include "Building.h"
-class Tower : public Building
+class Farm :
+	public Building
 {
 public:
-	Tower ();
-	~Tower ();
+	Farm ();
+	~Farm ();
 
 	void effect () override;
 	void repair () override;
-	void level_up () override;
+	void level_up() override;
 
 private:
-	int attack_;
+	int n_coins_;
 };
 
