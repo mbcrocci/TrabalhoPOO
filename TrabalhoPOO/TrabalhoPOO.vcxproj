@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1433C1A5-2507-4709-AE0A-A8E67F587997}</ProjectGuid>
     <RootNamespace>TrabalhoPOO</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -40,7 +40,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -116,12 +116,16 @@
     <ClCompile Include="Castle.cpp" />
     <ClCompile Include="Colony.cpp" />
     <ClCompile Include="Command.cpp" />
+    <ClCompile Include="Consola.cpp" />
     <ClCompile Include="Dagger.cpp" />
     <ClCompile Include="Farm.cpp" />
     <ClCompile Include="Flag.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="HealthPot.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ListCommand.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="MonsterAggression.cpp" />
     <ClCompile Include="MonsterSeeker.cpp" />
@@ -141,11 +145,15 @@
     <ClInclude Include="Castle.h" />
     <ClInclude Include="Colony.h" />
     <ClInclude Include="Command.h" />
+    <ClInclude Include="Consola.h" />
     <ClInclude Include="Dagger.h" />
     <ClInclude Include="Farm.h" />
     <ClInclude Include="Flag.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="HealthPot.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="ListCommand.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="MonsterAggression.h" />
     <ClInclude Include="MonsterSeeker.h" />
