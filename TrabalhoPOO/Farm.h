@@ -7,6 +7,7 @@ public:
 	Farm ();
 	~Farm ();
 
+	int getID () override;
 	void effect () override;
 	void repair () override;
 	void level_up() override;

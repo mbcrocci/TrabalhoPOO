@@ -4,6 +4,7 @@
 
 Tower::Tower ()
 {
+	ID_ = 3; // TODO
 	health_ = 20;
 	defense_ = 10;
 	attack_ = 0;
@@ -13,6 +14,11 @@ Tower::Tower ()
 
 Tower::~Tower ()
 {}
+
+int Tower::getID ()
+{
+	return ID_;
+}
 
 void Tower::level_up ()
 {

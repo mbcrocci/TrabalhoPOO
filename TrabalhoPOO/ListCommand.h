@@ -6,5 +6,7 @@ class ListCommand :
 public:
 	ListCommand ();
 	~ListCommand ();
+
+	void execute ( World& ) override;
 };
 

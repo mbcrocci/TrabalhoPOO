@@ -4,6 +4,7 @@
 
 Farm::Farm ()
 {
+	ID_ = 2; // TODO
 	health_ = 20;
 	defense_ = 10;
 	level_ = 1;
@@ -13,6 +14,11 @@ Farm::Farm ()
 
 Farm::~Farm ()
 {}
+
+int Farm::getID ()
+{
+	return ID_;
+}
 
 void Farm::effect ()
 {

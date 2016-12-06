@@ -1,5 +1,6 @@
 #pragma once
-class Building
+#include "Entity.h"
+class Building : public Entity
 {
 public:
 	// TODO: change func name

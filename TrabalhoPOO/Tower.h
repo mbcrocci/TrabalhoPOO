@@ -6,6 +6,7 @@ public:
 	Tower ();
 	~Tower ();
 
+	int getID () override;
 	void effect () override;
 	void repair () override;
 	void level_up () override;

@@ -9,5 +9,6 @@ public:
 
 	void effect () override;
 	void repair () override;
+	int getID () override;
 };
 

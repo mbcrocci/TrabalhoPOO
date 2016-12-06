@@ -1,8 +1,9 @@
 #pragma once
-class Item
+#include "Entity.h"
+class Item : public Entity 
 {
 public:
-	Item ();
-	~Item ();
+	//TODO
+	virtual void something () = 0;
 };
 
