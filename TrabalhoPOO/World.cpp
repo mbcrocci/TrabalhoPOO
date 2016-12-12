@@ -48,6 +48,15 @@ void World::setViewDim ( int vw, int  vh )
 	view_height_ = vh;
 }
 
+void World::autoResizeView ()
+{
+	if ( view_x_ + view_width_ > world_width_ )
+		view_width_ = world_width_ - view_x_;
+
+	if ( view_y_ + view_height_ > world_height_ )
+		view_height_ = world_height_ - view_y_;
+}
+
 void World::zoomIn ()
 {
 	// impossible to zoom in

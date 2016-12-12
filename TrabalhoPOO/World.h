@@ -24,6 +24,8 @@ public:
 	std::pair<int, int> getViewDim () const;
 	void setViewCoord ( int, int );
 	void setViewDim ( int, int );
+
+	void autoResizeView ();
 	void zoomIn ();
 	void zoomOut ();
 
