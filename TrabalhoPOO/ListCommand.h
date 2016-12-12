@@ -4,9 +4,12 @@ class ListCommand :
 	public Command
 {
 public:
-	ListCommand ();
+	ListCommand (World&);
 	~ListCommand ();
 
-	void execute ( World& ) override;
+	void execute () override;
+
+private:
+	World world_;
 };
 

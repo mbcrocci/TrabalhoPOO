@@ -17,6 +17,9 @@ public:
 	World ( int, int );
 	std::shared_ptr<Entity> getEntity ( int );
 
+	std::pair<int, int> getWorldDim () const;
+	void setWorldDim ( int, int );
+
 	std::pair<int, int> getViewCoord () const;
 	std::pair<int, int> getViewDim () const;
 	void setViewCoord ( int, int );
@@ -31,6 +34,14 @@ private:
 
 	int view_x_, view_y_; // view left corner coordinates
 	int view_width_, view_height_;
+
+	// Configs
+	int n_coins_;
+	int oponents_;
+
+
+
+
 
 	std::vector<std::shared_ptr<Entity>> entities_;
 };

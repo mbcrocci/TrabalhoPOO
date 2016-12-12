@@ -7,6 +7,6 @@ public:
 	Command ();
 	~Command ();
 
-	virtual void execute (World&) = 0;
+	virtual void execute () = 0;
 };
 

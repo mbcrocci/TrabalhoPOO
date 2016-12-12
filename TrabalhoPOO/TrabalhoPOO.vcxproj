@@ -117,10 +117,12 @@
     <ClCompile Include="Colony.cpp" />
     <ClCompile Include="Consola.cpp" />
     <ClCompile Include="Dagger.cpp" />
+    <ClCompile Include="DimCommand.cpp" />
     <ClCompile Include="Farm.cpp" />
     <ClCompile Include="Flag.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HealthPot.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="ListCommand.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="World.cpp" />
@@ -145,11 +147,13 @@
     <ClInclude Include="Command.h" />
     <ClInclude Include="Consola.h" />
     <ClInclude Include="Dagger.h" />
+    <ClInclude Include="DimCommand.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Farm.h" />
     <ClInclude Include="Flag.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="HealthPot.h" />
+    <ClInclude Include="InputHandler.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ListCommand.h" />
     <ClInclude Include="World.h" />

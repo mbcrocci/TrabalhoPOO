@@ -5,10 +5,13 @@ ListCommand::ListCommand ()
 {}
 
 
+ListCommand::ListCommand ( World & w) : world_(w)
+{}
+
 ListCommand::~ListCommand ()
 {}
 
-void ListCommand::execute ( World & w )
+void ListCommand::execute ()
 {
-	w.list_all_entities ();
+	world_.list_all_entities ();
 }

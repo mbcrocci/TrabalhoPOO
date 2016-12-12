@@ -10,9 +10,20 @@ World::~World ()
 
 std::shared_ptr<Entity> World::getEntity ( int id )
 {
-	for ( auto i = entities_.begin (); i != entities_.end (); ++i )
-		if ( ( *i )->getID () == id )
-			return *i;
+	for ( auto e : entities_ )
+		if ( e->getID () == id )
+			return e;
+}
+
+std::pair<int, int> World::getWorldDim () const
+{
+	return std::pair<int, int> (world_width_, world_height_);
+}
+
+void World::setWorldDim ( int w, int h)
+{
+	world_width_ = w;
+	world_height_ = h;
 }
 
 std::pair<int, int> World::getViewCoord () const
