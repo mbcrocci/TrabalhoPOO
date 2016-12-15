@@ -3,7 +3,7 @@
 class Tower : public Building
 {
 public:
-	Tower ();
+	Tower ( int, int, std::string );
 	virtual ~Tower ();
 
 	int getID () override;
@@ -12,7 +12,8 @@ public:
 	void level_up () override;
 	std::string getInfo () override;
 	std::string getString () override;
-
+	std::pair<int, int> getCoord () override;
+	void setCoord ( int, int ) override;
 private:
 	int attack_;
 };

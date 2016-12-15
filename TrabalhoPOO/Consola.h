@@ -18,6 +18,9 @@ Dez 2016 - Exemplo melhorado.
 #define __CONSOLA_H__
 
 #include <windows.h>
+#include <string>
+
+#include <iostream>
 
 class Consola {
 
@@ -123,6 +126,10 @@ public:
 	//   . Se oculta e volta a mostrar a janela da consola
 	//   . Se redimensiona a janela
 	static void drawCircle(int X, int Y, int R, int Pen, int Fill);  // ##### Mingw ->Sem efeito (Não disponivel) #####
+
+
+	// Maurizio Crocci
+	static void debugPrint ( std::string s );
 };
 
 #endif

@@ -25,11 +25,11 @@
     <Filter Include="Source Files\Entities\Buildings">
       <UniqueIdentifier>{b4d87eda-e270-4b76-ad17-4e8a21852e32}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Entities\Traits">
-      <UniqueIdentifier>{acfd05e8-a605-4c0c-bbf1-449b5fba3890}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Traits">
       <UniqueIdentifier>{df91796c-068f-49bd-8caf-677b3d9e0f39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Traits">
+      <UniqueIdentifier>{acfd05e8-a605-4c0c-bbf1-449b5fba3890}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -46,22 +46,22 @@
       <Filter>Source Files\Entities\Buildings</Filter>
     </ClCompile>
     <ClCompile Include="Armor.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Flag.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
     <ClCompile Include="SecondChance.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Student.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Sword.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Walker.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
@@ -85,28 +85,28 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Aggression.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
     <ClCompile Include="BuildSeeker.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
     <ClCompile Include="HardSkin.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
     <ClCompile Include="HeatSeeker.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Knife.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Ecologic.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Medicine.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Superior.cpp">
-      <Filter>Source Files\Entities\Traits</Filter>
+      <Filter>Source Files\Traits</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -191,5 +191,10 @@
     <ClInclude Include="Trait.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="cmds.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

@@ -1,0 +1,16 @@
+dim 100 100
+moedas 10
+oponentes 2
+
+castelo A 0 0
+castelo B 10 10
+castelo C 20 20
+
+mkperfil a
+addperfil a bandeira
+addperfil a peledura
+addperfil a agressao
+
+mkperfil b
+addperfil b bandeira
+addperfil b peledura

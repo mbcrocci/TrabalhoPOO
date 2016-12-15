@@ -6,12 +6,16 @@
 class Beeing : public Entity
 {
 public:
-	Beeing ();
+	Beeing ( int x, int y, std::string colony, std::shared_ptr<Profile> );
 	virtual ~Beeing ();
 
 	int getID () override;
 	std::string getInfo () override;
 	std::string getString () override;
+
+	std::pair<int, int> getCoord () override;
+
+	void setCoord ( int, int ) override;
 
 	void set_profile ( std::shared_ptr<Profile> );
 

@@ -232,3 +232,10 @@ void Consola::drawCircle(int X, int Y, int R, int Pen, int Fill){
 	ReleaseDC(hwnd, DrawHDC);  // torna-se lento
 #endif
 }
+
+void Consola::debugPrint(std::string s)
+{
+	setTextColor ( AZUL_CLARO );
+	std::cout << s << "\n";
+	setTextColor ( BRANCO );
+}

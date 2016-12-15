@@ -1,7 +1,7 @@
 #include "Game.h"
 
-Game::Game () : tick_ ( 0 ), world_()
-{}
+Game::Game () : tick_ ( 0 )
+{ }
 
 Game::~Game ()
 {}
@@ -9,6 +9,71 @@ Game::~Game ()
 int Game::getTick() const
 {
 	return tick_;
+}
+
+std::string Game::list_configs () const
+{
+	std::ostringstream oss;
+	oss << "Config:\n"
+		<< "\tWidth: " << config_world_width_ << "\n"
+		<< "\tHeight: " << config_world_heigth_ << "\n"
+		<< "\tNCoins: " << config_num_coins_ << "\n"
+		<< "\tNCOlonies: " << config_num_colonies << "\n"
+		<< "\tColonies:\n";
+
+	for ( auto const & colony : colonies_map_ )
+		oss << "\t\t" << colony.first << ": (" << colony.second.first << "," << colony.second.second << ")\n";
+
+	// TODO: profiles
+
+	return oss.str ();
+}
+
+void Game::makeProfile ( std::string p_name )
+{
+	bool found = false;
+	for ( auto profile : profiles_ )
+		if ( profile->getName () != p_name )
+			found = true;
+
+	if ( !found )
+		profiles_.push_back ( std::make_shared<Profile> ( p_name ) );
+}
+
+void Game::addToProfile ( std::string p_name, std::string trait )
+{
+	auto profile = findProfile ( p_name );
+	if ( profile )
+	{
+		profile->addTrait ( trait );
+	}
+}
+
+void Game::removeProfile ( std::string p_name )
+{
+	int pos;
+	for ( unsigned int i = 0; i < profiles_.size (); i++ )
+		if ( profiles_[ i ]->getName () == p_name )
+			pos = i;
+
+	profiles_.erase ( profiles_.begin () + pos, profiles_.end () );
+}
+
+std::shared_ptr<Profile> Game::findProfile ( std::string s )
+{
+	for ( auto p : profiles_ )
+		if ( p->getName () == s )
+			return p;
+
+	return nullptr;
+}
+
+bool Game::colonyExists ( std::string c_name ) const
+{
+	if ( colonies_map_.find ( c_name ) != colonies_map_.end () )
+		return true;
+
+	return false;
 }
 
 void Game::loadInitFile(std::string file_name)
@@ -23,7 +88,8 @@ void Game::loadInitFile(std::string file_name)
 			auto w = std::stoi ( command[ 1 ] );
 			auto h = std::stoi ( command[ 2 ] );
 			//TODO: validade  
-			world_->setWorldDim ( w, h );
+			config_world_width_ = w;
+			config_world_heigth_ = h;
 		}
 		else if ( command[ 0 ] == "moedas" )
 		{
@@ -33,7 +99,7 @@ void Game::loadInitFile(std::string file_name)
 			auto n = std::stoi ( command[ 1 ] );
 			//TODO: validade  
 
-			world_->setNCoins ( n );
+			config_num_coins_ = n;
 		}
 		else if ( command[ 0 ] == "oponentes" )
 		{
@@ -43,23 +109,22 @@ void Game::loadInitFile(std::string file_name)
 			auto n = std::stoi ( command[ 1 ] );
 			//TODO: validade  
 
-			world_->setNColonies ( n );
+			config_num_colonies = n;
 		}
 		else if ( command[ 0 ] == "castelo" )
 		{
-			if ( command.size () != 4 || world_->getNColonies () <= 0 )
+			if ( command.size () != 4 || config_num_colonies <= 0 )
 				continue;
 
 			//TODO: validade colony
-			if ( world_->colonyExists ( command[ 1 ] ) )
+			if ( colonyExists ( command[ 1 ] ) )
 				continue;
 
 			auto l = std::stoi ( command[ 2 ] );
 			auto c = std::stoi ( command[ 3 ] );
 			//TODO: validade  
 
-			// TODO: END!!
-
+			colonies_map_[ command[ 1 ] ] = std::make_pair ( l, c );
 		}
 		else if ( command[ 0 ] == "mkperfil" )
 		{
@@ -67,7 +132,7 @@ void Game::loadInitFile(std::string file_name)
 				continue;
 
 			//TODO: validate
-			world_->makeProfile ( command[ 2 ] );
+			makeProfile ( command[ 1 ] );
 		}
 		else if ( command[ 0 ] == "addperfil" )
 		{
@@ -75,7 +140,7 @@ void Game::loadInitFile(std::string file_name)
 				continue;
 
 			// TODO: validate
-			world_->addToProfile ( command[ 1 ], command[ 2 ] );
+			addToProfile ( command[ 1 ], command[ 2 ] );
 		}
 		else if ( command[ 0 ] == "subperfil" )
 		{
@@ -83,24 +148,25 @@ void Game::loadInitFile(std::string file_name)
 				continue;
 
 			// TODO: validate
-			world_->addToProfile ( command[ 1 ], command[ 2 ] );
+			addToProfile ( command[ 1 ], command[ 2 ] );
 		}
 		else if ( command[ 0 ] == "rmperfil" )
 		{
 			if ( command.size () != 2 )
 				continue;
 
-			world_->removeProfile ( command[ 1 ] );
+			removeProfile ( command[ 1 ] );
 		}
 		else if ( command[ 0 ] == "load" )
 		{
 			if ( command.size () != 2 )
 				continue;
 
-			this->loadInitFile ( command[ 1 ] );
+			loadInitFile ( command[ 1 ] );
 		}
 		else if ( command[ 0 ] == "inicio" )
 		{
+			// doesnt do anything, use it in init loop to start the game
 			break;
 		}
 }
@@ -110,23 +176,19 @@ void Game::init ()
 	while ( true )
 	{
 		auto command = input_handler_.handleInput ();
-		std::ostringstream oss;
-		for ( auto cmd : command )
-			oss << "[" << cmd << "]";
-		std::cout << oss.str ();
 
-		if (command[0] == "dim" )
+		if ( command[ 0 ] == "dim" )
 		{
-			if ( command.size() != 3 )
+			if ( command.size () != 3 )
 				continue;
 
 			auto w = std::stoi ( command[ 1 ] );
 			auto h = std::stoi ( command[ 2 ] );
 			//TODO: validade  
-			world_->setWorldDim ( w, h );
-			std::cout << "command success!\n";
+			config_world_width_ = w;
+			config_world_heigth_ = h;
 		}
-		else if (command[0] == "moedas" )
+		else if ( command[ 0 ] == "moedas" )
 		{
 			if ( command.size () != 2 )
 				continue;
@@ -134,9 +196,9 @@ void Game::init ()
 			auto n = std::stoi ( command[ 1 ] );
 			//TODO: validade  
 
-			world_->setNCoins ( n );
-		} 
-		else if (command[0] == "oponentes" )
+			config_num_coins_ = n;
+		}
+		else if ( command[ 0 ] == "oponentes" )
 		{
 			if ( command.size () != 2 )
 				continue;
@@ -144,24 +206,22 @@ void Game::init ()
 			auto n = std::stoi ( command[ 1 ] );
 			//TODO: validade  
 
-			world_->setNColonies ( n );
-			std::cout << "command success!\n";
+			config_num_colonies = n;
 		}
-		else if (command[0] == "castelo" )
+		else if ( command[ 0 ] == "castelo" )
 		{
-			if ( command.size () != 4 || world_->getNColonies() <= 0)
+			if ( command.size () != 4 || config_num_colonies <= 0 )
 				continue;
 
 			//TODO: validade colony
-			if ( world_->colonyExists ( command[ 1 ] ) )
+			if ( colonyExists ( command[ 1 ] ) )
 				continue;
 
 			auto l = std::stoi ( command[ 2 ] );
 			auto c = std::stoi ( command[ 3 ] );
 			//TODO: validade  
 
-			// TODO: END!!
-			std::cout << "command success!\n";
+			colonies_map_[ command[ 1 ] ] = std::make_pair ( l, c );
 		}
 		else if ( command[ 0 ] == "mkperfil" )
 		{
@@ -169,8 +229,7 @@ void Game::init ()
 				continue;
 
 			//TODO: validate
-			world_->makeProfile ( command[ 2 ] );
-			std::cout << "command success!\n";
+			makeProfile ( command[ 1 ] );
 		}
 		else if ( command[ 0 ] == "addperfil" )
 		{
@@ -178,8 +237,7 @@ void Game::init ()
 				continue;
 
 			// TODO: validate
-			world_->addToProfile ( command[ 1 ], command[ 2 ] );
-			std::cout << "command success!\n";
+			addToProfile ( command[ 1 ], command[ 2 ] );
 		}
 		else if ( command[ 0 ] == "subperfil" )
 		{
@@ -187,37 +245,51 @@ void Game::init ()
 				continue;
 
 			// TODO: validate
-			world_->addToProfile ( command[ 1 ], command[ 2 ] );
-			std::cout << "command success!\n";
+			addToProfile ( command[ 1 ], command[ 2 ] );
 		}
 		else if ( command[ 0 ] == "rmperfil" )
 		{
 			if ( command.size () != 2 )
 				continue;
 
-			world_->removeProfile ( command[ 1 ] );
+			removeProfile ( command[ 1 ] );
 		}
 		else if ( command[ 0 ] == "load" )
 		{
 			if ( command.size () != 2 )
 				continue;
 
-			this->loadInitFile ( command[ 1 ] );
+			loadInitFile ( command[ 1 ] );
 		}
 		else if ( command[ 0 ] == "inicio" )
 		{
-			std::cout << "command success!\n";
 			break;
+		}
+		else
+		{
+			std::cout << "Command invalid!\n";
 		}
 	}
 }
 
 void Game::run ()
 {
+	Consola::clrscr ();
+
+	World world_( 
+		config_world_width_, config_world_heigth_,
+		config_num_coins_, colonies_map_, profiles_
+	);
+
+	// show once before startin game loop
+	render ( world_ );
 	while ( true )
 	{
 		//std::chrono::time_point<std::chrono::system_clock> start, end;
 		//start = std::chrono::system_clock::now (); // gets current time
+
+		Consola::debugPrint ( "listing all entities" );
+		Consola::debugPrint ( world_.list_all_entities () );
 
 		// Get input
 		auto command = input_handler_.handleInput ();
@@ -229,7 +301,7 @@ void Game::run ()
 			auto w = std::stoi ( command[ 1 ] );
 			auto h = std::stoi ( command[ 2 ] );
 			//TODO: validate
-			world_->setViewDim ( w, h );
+			world_.setViewCoord ( w, h );
 		}
 		else if ( command[ 0 ] == "zoomout" )
 		{
@@ -238,7 +310,7 @@ void Game::run ()
 
 			auto n = std::stoi ( command[ 1 ] );
 			//TODO: validate
-			world_->zoomOutN ( n );
+			world_.zoomOutN ( n );
 		}
 		else if ( command[ 0 ] == "setmoedas" )
 		{
@@ -247,7 +319,7 @@ void Game::run ()
 
 			auto n = std::stoi ( command[ 2 ] );
 			
-			world_->setColonyCoins ( command[ 1 ], n );
+			world_.setColonyCoins ( command[ 1 ], n );
 		}
 		else if ( command[ 0 ] == "build" )
 		{
@@ -282,7 +354,13 @@ void Game::run ()
 		}
 		else if ( command[ 0 ] == "ser" )
 		{
-			continue;
+			if ( command.size() != 3 )
+				continue;
+
+			auto num = std::stoi ( command[ 1 ] );
+
+			for ( auto i = 0; i < num; i++ )
+				world_.makeBeeing ( command[ 2 ] );
 		}
 		else if ( command[ 0 ] == "next" )
 		{
@@ -299,7 +377,12 @@ void Game::run ()
 		}
 		else if ( command[ 0 ] == "ataca" )
 		{
-			continue;
+			// TODO: Do this right!
+			auto coord = world_.getUserColony ()->getCastle ()->getCoord ();
+			auto beeings = world_.getAllBeeings ( coord.first, coord.second );
+
+			for ( auto beeing : beeings )
+				beeing->setCoord ( coord.first + 2, coord.second + 3 );
 		}
 		else if ( command[ 0 ] == "recolhe" )
 		{
@@ -325,9 +408,13 @@ void Game::run ()
 		{
 			continue;
 		}
+		else
+		{
+			std::cout << "Command invalid!\n";
+		}
 
 		//update ();
-		render ();
+		render (world_);
 
 		tick_++;
 
@@ -336,32 +423,32 @@ void Game::run ()
 	}
 }
 
-void Game::render()
+void Game::render( World& world_) const
 {
-	//Consola::clrscr ();
+	Consola::clrscr ();
+	//Consola::debugPrint ( list_configs () );
+	//Consola::debugPrint ( world_.list_config () );
 
-	auto view_coord = world_->getViewCoord ();
-	auto view_dims = world_->getViewDim ();
-	auto board = world_->getBoard ();
+	auto view_coord = world_.getViewCoord ();
+	auto view_limit = world_.getViewLimits ();
 
-	for ( auto y = view_coord.second; y < view_dims.second; y++ )
+	for ( auto y = view_coord.second; y < view_limit.second; y++ )
 	{
-		for ( auto x = view_coord.first; x < view_dims.first; x++ )
+		for ( auto x = view_coord.first; x < view_limit.first; x++ )
 		{
 			std::string chr;
-			auto entity = world_->getFirstEntity ( x, y );
+			auto entity = world_.getFirstEntity ( x, y );
 			if ( entity )
 			{
-	//			Consola::setTextColor ( Consola::VERDE );
-				std::cout << board[ y ][ x ]->getString ();
-	//			Consola::setTextColor ( Consola::BRANCO );
+				Consola::setTextColor ( Consola::VERDE );
+				std::cout << entity->getString ();
+				Consola::setTextColor ( Consola::BRANCO );
 			}
 			else
 			{
-				std::cout << " ";
+				std::cout << "_";
 			}
 		}
 		std::cout << "\n";
 	}
-
 }

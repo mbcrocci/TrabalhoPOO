@@ -7,7 +7,7 @@
 class Colony
 {
 public:
-	Colony ();
+	Colony ( std::string );
 	virtual ~Colony ();
 
 	std::string getName ();
@@ -17,12 +17,14 @@ public:
 	void addBuilding ( std::shared_ptr<Building> );
 	void addBeeing ( std::shared_ptr<Beeing> );
 
+	std::shared_ptr<Building> getCastle () const;
+
 	std::string buildingList ();
 	std::string monsterList ();
 	std::string playerDetails ();
 
 private:
-	std::string name;
+	std::string name_;
 	int n_coins_;
 	int color_; // maybe change it
 

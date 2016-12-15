@@ -1,3 +1,7 @@
-﻿  InputHandler.cpp
+﻿  World.cpp
+  Tower.cpp
+  Farm.cpp
+  Castle.cpp
+  Generating Code...
   TrabalhoPOO.vcxproj -> C:\Users\mbcrocci\Source\Repos\TrabalhoPOO\x64\Debug\TrabalhoPOO.exe
   TrabalhoPOO.vcxproj -> C:\Users\mbcrocci\Source\Repos\TrabalhoPOO\x64\Debug\TrabalhoPOO.pdb (Partial PDB)
