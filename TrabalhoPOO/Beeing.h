@@ -3,20 +3,14 @@
 #include "Profile.h"
 #include "Entity.h"
 
-
-enum
-{
-	a, b, c, d
-};
-
 class Beeing : public Entity
 {
 public:
 	Beeing ();
-	~Beeing ();
+	virtual ~Beeing ();
 
 	int getID () override;
-	const std::string & getInfo () override;
+	std::string getInfo () override;
 	std::string getString () override;
 
 	void set_profile ( std::shared_ptr<Profile> );

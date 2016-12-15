@@ -9,6 +9,7 @@
 #include "Ecologic.h"
 #include "Flag.h"
 #include "HardSkin.h"
+#include "HeatSeeker.h"
 #include "Knife.h"
 #include "Medicine.h"
 #include "SecondChance.h"
@@ -17,7 +18,7 @@
 #include "Sword.h"
 #include "Walker.h"
 
-std::map<std::string, int> trait_dict_ = {
+static std::map<std::string, int> trait_dict_ = {
 	{ "bandeira", 1 },
 	{ "superior", 2 },
 	{ "peledura", 3 },
@@ -38,9 +39,9 @@ class Profile
 {
 public:
 	Profile (std::string);
-	~Profile ();
+	virtual ~Profile ();
 
-	const std::string & getName();
+	std::string getName() const;
 
 	void addTrait ( int );
 	void addTrait ( std::string );

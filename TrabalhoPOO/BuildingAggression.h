@@ -5,6 +5,7 @@ class BuildingAggression :
 {
 public:
 	BuildingAggression ();
-	~BuildingAggression ();
+	virtual ~BuildingAggression ();
+	void apply ( Beeing& );
 };
 

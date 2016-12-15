@@ -15,6 +15,17 @@ Beeing::Beeing ()
 Beeing::~Beeing ()
 {}
 
+int Beeing::getID()
+{
+	return 1; // TODO
+}
+
+std::string Beeing::getInfo()
+{
+	// TODO
+	return "";
+}
+
 std::string Beeing::getString()
 {
 	return "B";

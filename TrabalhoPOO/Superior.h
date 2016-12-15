@@ -5,6 +5,7 @@ class Superior :
 {
 public:
 	Superior ();
-	~Superior ();
+	virtual ~Superior ();
+
 };
 

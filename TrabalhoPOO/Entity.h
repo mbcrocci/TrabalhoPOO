@@ -5,7 +5,7 @@ class Entity
 {
 public:
 	virtual int getID () = 0;
-	virtual const std::string & getInfo () = 0;
+	virtual  std::string getInfo () = 0;
 	virtual std::string getString () = 0;
 
 

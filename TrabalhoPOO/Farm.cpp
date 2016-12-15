@@ -26,10 +26,22 @@ void Farm::effect ()
 	defense_++;
 }
 
+void Farm::repair()
+{
+	health_ = 20;
+	defense_ = 10;
+}
+
 void Farm::level_up ()
 {
 	level_++;
 	n_coins_++;
+}
+
+std::string Farm::getInfo()
+{
+	// TODO
+	return "";
 }
 
 std::string Farm::getString()

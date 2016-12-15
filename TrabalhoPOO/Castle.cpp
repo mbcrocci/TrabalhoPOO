@@ -11,9 +11,26 @@ Castle::Castle ()
 Castle::~Castle ()
 {}
 
+void Castle::effect()
+{
+	//TODO
+}
+
+void Castle::repair()
+{
+	health_ = 50;
+	defense_ = 10;
+}
+
 int Castle::getID ()
 {
 	return ID_;
+}
+
+std::string Castle::getInfo()
+{
+	//TODO
+	return "";
 }
 
 std::string Castle::getString()

@@ -5,12 +5,13 @@ class Farm :
 {
 public:
 	Farm ();
-	~Farm ();
+	virtual ~Farm ();
 
 	int getID () override;
 	void effect () override;
 	void repair () override;
 	void level_up() override;
+	std::string getInfo () override;
 	std::string getString () override;
 
 private:

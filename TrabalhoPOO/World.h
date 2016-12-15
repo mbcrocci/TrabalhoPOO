@@ -17,9 +17,9 @@ class World
 {
 public:
 	World ();
-	~World ();
+	virtual ~World ();
 
-	EntityPtr getEntity ( int );
+	//EntityPtr getEntity ( int );
 	EntityPtr getFirstEntity ( int, int ) const;
 	std::vector<std::vector<EntityPtr>> getBoard () const;
 
@@ -52,7 +52,7 @@ public:
 
 	void populate ();
 
-	const std::string & list_all_entities ();
+	std::string list_all_entities ();
 
 	std::string String ();
 

@@ -5,6 +5,6 @@ class Flag :
 {
 public:
 	Flag ();
-	~Flag ();
+	virtual ~Flag ();
+	
 };
-

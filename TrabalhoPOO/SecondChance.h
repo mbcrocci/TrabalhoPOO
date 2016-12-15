@@ -5,6 +5,7 @@ class SecondChance :
 {
 public:
 	SecondChance ();
-	~SecondChance ();
+	virtual ~SecondChance ();
+	
 };
 

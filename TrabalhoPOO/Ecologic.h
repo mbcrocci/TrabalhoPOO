@@ -5,6 +5,7 @@ class Ecologic :
 {
 public:
 	Ecologic ();
-	~Ecologic ();
+	virtual ~Ecologic ();
+	
 };
 

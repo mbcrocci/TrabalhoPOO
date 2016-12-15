@@ -8,7 +8,7 @@ class Colony
 {
 public:
 	Colony ();
-	~Colony ();
+	virtual ~Colony ();
 
 	std::string getName ();
 

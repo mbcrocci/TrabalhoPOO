@@ -2,14 +2,14 @@
 #include <map>
 #include <iostream>
 #include <vector>
+#include <string>
+#include <fstream>
+
 class InputHandler
 {
 public:
 	InputHandler ();
-	~InputHandler ();
-
-	bool isInitCommand ();
-	bool isPlayCommand ();
+	virtual ~InputHandler ();
 
 	std::vector<std::string> split_string ( std::string );
 	std::vector<std::string> handleInput ();

@@ -149,7 +149,7 @@ typedef BOOL(WINAPI * SetConsoleFont_)(HANDLE ConsoleOutput, DWORD FontIndex); /
 typedef BOOL(WINAPI * GetConsoleFontInfo_)(HANDLE ConsoleOutput, BOOL Unknown1, DWORD Unknown2, PCONSOLE_FONT_INFO ConsoleFontInfo); // kernel32!GetConsoleFontInfo
 typedef DWORD(WINAPI * GetNumberOfConsoleFonts_)(); // kernel32!GetNumberOfConsoleFonts
 
-
+/*
 void Consola::setTextSizeXP(int x, int y){
 #ifdef _MSC_VER
 	// Obtém acesso às funções "secretas" do Windows
@@ -187,6 +187,7 @@ void Consola::setTextSizeXP(int x, int y){
 	delete[] ConsoleInfo;
 #endif
 }
+*/
 
 
 // estas funcoes servem para pouco a nao ser que nao se tape/destape a janela

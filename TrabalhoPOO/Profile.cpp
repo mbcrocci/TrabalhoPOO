@@ -1,6 +1,4 @@
 #include "Profile.h"
-#include <wincon.h>
-#include "HeatSeeker.h"
 
 
 Profile::Profile(std::string s) : p_name_(s)
@@ -9,7 +7,7 @@ Profile::Profile(std::string s) : p_name_(s)
 Profile::~Profile ()
 {}
 
-const std::string& Profile::getName()
+std::string Profile::getName () const
 {
 	return p_name_;
 }
@@ -42,6 +40,10 @@ void Profile::addTrait(std::string s)
 		addTrait ( trait_dict_[ s ] );
 		trait_counter_[ s ]++;
 	}
+}
+
+void Profile::remTrait(int)
+{
 }
 
 std::vector<TraitPtr> Profile::getTraits() const

@@ -135,7 +135,7 @@ void World::addToProfile( std::string p_name, std::string trait )
 void World::removeProfile( std::string p_name )
 {
 	int pos;
-	for ( auto i = 0; i < profiles_.size (); i++ )
+	for ( unsigned int i = 0; i < profiles_.size (); i++ )
 		if ( profiles_[ i ]->getName () == p_name )
 			pos = i;
 
@@ -168,7 +168,7 @@ void World::populate()
 	// 
 }
 
-const std::string & World::list_all_entities ()
+std::string World::list_all_entities ()
 {
 	std::ostringstream oss;
 	for ( auto i = entities_.begin (); i != entities_.end (); ++i )

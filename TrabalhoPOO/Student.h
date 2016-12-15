@@ -5,6 +5,7 @@ class Student :
 {
 public:
 	Student ();
-	~Student ();
+	virtual ~Student ();
+	
 };
 

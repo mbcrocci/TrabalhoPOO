@@ -1,12 +1,12 @@
 #pragma once
 #include "Trait.h"
-class Aggression :
-	public Trait
+
+class Aggression : public Trait
 {
 public:
 	Aggression ();
-	~Aggression ();
+	virtual ~Aggression ();
 
-	void apply ( Beeing& );
+	
 };
 

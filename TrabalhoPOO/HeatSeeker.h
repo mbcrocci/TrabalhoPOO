@@ -5,6 +5,7 @@ class HeatSeeker :
 {
 public:
 	HeatSeeker ();
-	~HeatSeeker ();
+	virtual ~HeatSeeker ();
+	
 };
 

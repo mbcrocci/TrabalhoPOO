@@ -5,6 +5,7 @@ class Medicine :
 {
 public:
 	Medicine ();
-	~Medicine ();
+	virtual ~Medicine ();
+	
 };
 

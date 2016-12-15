@@ -5,11 +5,13 @@ class Castle :
 {
 public:
 	Castle ();
-	~Castle ();
+	virtual ~Castle ();
 
 	void effect () override;
 	void repair () override;
 	int getID () override;
+	std::string getInfo () override;
 	std::string  getString () override;
+
 };
 

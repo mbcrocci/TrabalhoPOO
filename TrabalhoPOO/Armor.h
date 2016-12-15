@@ -5,6 +5,7 @@ class Armor :
 {
 public:
 	Armor ();
-	~Armor ();
+	virtual ~Armor ();
+	
 };
 

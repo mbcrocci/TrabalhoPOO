@@ -5,6 +5,7 @@ class BuildSeeker :
 {
 public:
 	BuildSeeker ();
-	~BuildSeeker ();
+	virtual ~BuildSeeker ();
+	
 };
 

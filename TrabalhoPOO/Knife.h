@@ -5,6 +5,7 @@ class Knife :
 {
 public:
 	Knife ();
-	~Knife ();
+	virtual ~Knife ();
+	
 };
 

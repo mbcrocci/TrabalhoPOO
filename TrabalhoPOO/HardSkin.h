@@ -5,6 +5,7 @@ class HardSkin :
 {
 public:
 	HardSkin ();
-	~HardSkin ();
+	virtual ~HardSkin ();
+	
 };
 

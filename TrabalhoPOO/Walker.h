@@ -5,6 +5,7 @@ class Walker :
 {
 public:
 	Walker ();
-	~Walker ();
+	virtual ~Walker ();
+
 };
 
