@@ -15,3 +15,8 @@ int Castle::getID ()
 {
 	return ID_;
 }
+
+std::string Castle::getString()
+{
+	return "C";
+}

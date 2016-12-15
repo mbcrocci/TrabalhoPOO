@@ -1,48 +1,209 @@
-﻿  Game.cpp
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2039: 'std::this_thread::sleep_for': is not a member of 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\chrono(969): note: see declaration of 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'common_type<std::chrono::duration<_Rep,_Period>,std::chrono::duration<_Rep2,_Period2>>::type std::chrono::operator +(const std::chrono::duration<_Rep,_Period> &,const std::chrono::duration<_Rep2,_Period2> &)': could not deduce template argument for 'const std::chrono::duration<_Rep,_Period> &' from 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\chrono(330): note: see declaration of 'std::chrono::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::chrono::time_point<_Clock,common_type<_Duration,std::chrono::duration<_Rep2,_Period2>>::type> std::chrono::operator +(const std::chrono::time_point<_Clock,_Duration> &,const std::chrono::duration<_Rep2,_Period2> &)': could not deduce template argument for 'const std::chrono::duration<_Rep2,_Period2> &' from 'int'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\chrono(805): note: see declaration of 'std::chrono::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::chrono::time_point<_Clock,common_type<std::chrono::duration<_Rep,_Period>,_Duration>::type> std::chrono::operator +(const std::chrono::duration<_Rep,_Period> &,const std::chrono::time_point<_Clock,_Duration> &)': could not deduce template argument for 'const std::chrono::duration<_Rep,_Period> &' from 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\chrono(820): note: see declaration of 'std::chrono::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::reverse_iterator<_RanIt> std::operator +(reverse_iterator<_RanIt>::difference_type,const std::reverse_iterator<_RanIt> &)': could not deduce template argument for 'const std::reverse_iterator<_RanIt> &' from 'int'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(1280): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::_Array_const_iterator<_Ty,_Size> std::operator +(_Array_const_iterator<_Ty,_Size>::difference_type,std::_Array_const_iterator<_Ty,_Size>)': could not deduce template argument for 'std::_Array_const_iterator<_Ty,_Size>' from 'int'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(1910): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::_Array_iterator<_Ty,_Size> std::operator +(_Array_iterator<_Ty,_Size>::difference_type,std::_Array_iterator<_Ty,_Size>)': could not deduce template argument for 'std::_Array_iterator<_Ty,_Size>' from 'int'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(2046): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::move_iterator<_RanIt> std::operator +(_Diff,const std::move_iterator<_RanIt> &)': could not deduce template argument for 'const std::move_iterator<_RanIt> &' from 'int'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(2195): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::_String_const_iterator<_Mystr> std::operator +(_String_const_iterator<_Mystr>::difference_type,std::_String_const_iterator<_Mystr>)': could not deduce template argument for 'std::_String_const_iterator<_Mystr>' from 'int'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(293): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::_String_iterator<_Mystr> std::operator +(_String_iterator<_Mystr>::difference_type,std::_String_iterator<_Mystr>)': could not deduce template argument for 'std::_String_iterator<_Mystr>' from 'int'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(425): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2310): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const _Elem *' from 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2324): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'int'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2338): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2352): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2366): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2380): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2390): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2400): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'const _Elem *' from 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2414): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'int'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2424): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2436): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2446): note: see declaration of 'std::operator +'
-c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\game.cpp(25): error C2676: binary '+': 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>' does not define this operator or a conversion to a type acceptable to the predefined operator
-  Command.cpp
+﻿  Profile.cpp
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(290): error C3646: 'ptPosition': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(290): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(291): error C3646: 'ptSize': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(291): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(292): error C3646: 'wStyle': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(292): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(293): error C3646: 'wPattern': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(293): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(423): error C3646: 'DataBytes': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(423): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(424): error C3646: 'InjectionPoint': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(424): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(425): error C3646: 'PageNumber': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(425): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(511): error C3646: 'bPageIndependent': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(511): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(512): error C3646: 'bSetPageDevice': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(512): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(522): error C3646: 'lOrientation': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(522): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(523): error C3646: 'lWidth': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(523): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(524): error C3646: 'lHeight': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(524): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(525): error C3646: 'lWidthOffset': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(525): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(526): error C3646: 'lHeightOffset': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(526): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(588): error C3646: 'eM11': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(588): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(589): error C3646: 'eM12': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(589): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(590): error C3646: 'eM21': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(590): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(591): error C3646: 'eM22': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(591): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(592): error C3646: 'eDx': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(592): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(593): error C3646: 'eDy': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(593): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(594): error C2143: syntax error: missing ';' before '*'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(594): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(599): error C3646: 'bmType': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(599): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(600): error C3646: 'bmWidth': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(600): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(601): error C3646: 'bmHeight': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(601): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(602): error C3646: 'bmWidthBytes': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(602): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(603): error C3646: 'bmPlanes': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(603): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(604): error C3646: 'bmBitsPixel': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(604): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(605): error C3646: 'bmBits': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(605): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(606): error C2143: syntax error: missing ';' before '*'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(606): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(606): error C2377: 'FAR': redefinition; typedef cannot be overloaded with any other symbol
+  c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(594): note: see declaration of 'FAR'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(617): error C3646: 'rgbtBlue': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(617): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(618): error C3646: 'rgbtGreen': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(618): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(619): error C3646: 'rgbtRed': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(619): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(620): error C2143: syntax error: missing ';' before '*'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(620): error C2371: 'NEAR': redefinition; different basic types
+  c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(606): note: see declaration of 'NEAR'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(620): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(620): error C2086: 'int FAR': redefinition
+  c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(606): note: see declaration of 'FAR'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(631): error C3646: 'rgbBlue': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(631): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(632): error C3646: 'rgbGreen': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(632): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(633): error C3646: 'rgbRed': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(633): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(634): error C3646: 'rgbReserved': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(634): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(643): error C2143: syntax error: missing ';' before '*'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(643): error C2371: 'FAR': redefinition; different basic types
+  c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(606): note: see declaration of 'FAR'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(643): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(668): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(668): error C2146: syntax error: missing ';' before identifier 'LCSCSTYPE'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(700): error C2143: syntax error: missing ';' before '*'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(700): error C2371: 'FAR': redefinition; different basic types
+  c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(606): note: see declaration of 'FAR'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(700): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(701): error C2143: syntax error: missing ';' before '*'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(701): error C2371: 'FAR': redefinition; different basic types
+  c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(606): note: see declaration of 'FAR'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(701): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(719): error C2143: syntax error: missing ';' before '*'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(719): error C2371: 'FAR': redefinition; different basic types
+  c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(606): note: see declaration of 'FAR'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(719): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(740): error C2143: syntax error: missing ';' before '*'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(740): error C2371: 'FAR': redefinition; different basic types
+  c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(606): note: see declaration of 'FAR'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(740): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(754): error C3646: 'lcsSignature': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(754): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(755): error C3646: 'lcsVersion': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(755): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(756): error C3646: 'lcsSize': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(756): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(757): error C3646: 'lcsCSType': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(757): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(760): error C3646: 'lcsGammaRed': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(760): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(761): error C3646: 'lcsGammaGreen': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(761): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(762): error C3646: 'lcsGammaBlue': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(762): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(763): error C3646: 'lcsFilename': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(763): error C2143: syntax error: missing ',' before '['
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(763): error C2143: syntax error: missing ')' before ';'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(763): error C2238: unexpected token(s) preceding ';'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(766): error C3646: 'lcsSignature': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(766): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(767): error C3646: 'lcsVersion': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(767): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(768): error C3646: 'lcsSize': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(768): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(769): error C3646: 'lcsCSType': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(769): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(772): error C3646: 'lcsGammaRed': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(772): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(773): error C3646: 'lcsGammaGreen': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(773): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(774): error C3646: 'lcsGammaBlue': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(774): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(775): error C3646: 'lcsFilename': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(775): error C2143: syntax error: missing ',' before '['
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(775): error C2143: syntax error: missing ')' before ';'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(775): error C2238: unexpected token(s) preceding ';'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(795): error C3646: 'bcSize': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(795): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(796): error C3646: 'bcWidth': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(796): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(797): error C3646: 'bcHeight': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(797): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(798): error C3646: 'bcPlanes': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(798): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(799): error C3646: 'bcBitCount': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(799): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(800): error C2143: syntax error: missing ';' before '*'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(800): error C2371: 'FAR': redefinition; different basic types
+  c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(606): note: see declaration of 'FAR'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(800): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(809): error C3646: 'biSize': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(809): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(812): error C3646: 'biPlanes': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(812): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(813): error C3646: 'biBitCount': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(813): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(814): error C3646: 'biCompression': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(814): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(815): error C3646: 'biSizeImage': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(815): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(818): error C3646: 'biClrUsed': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(818): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(819): error C3646: 'biClrImportant': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(819): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(820): error C2143: syntax error: missing ';' before '*'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(820): error C2371: 'FAR': redefinition; different basic types
+  c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(606): note: see declaration of 'FAR'
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(820): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(831): error C3646: 'bV4Size': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(831): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(834): error C3646: 'bV4Planes': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(834): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(835): error C3646: 'bV4BitCount': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(835): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(836): error C3646: 'bV4V4Compression': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(836): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(837): error C3646: 'bV4SizeImage': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(837): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(840): error C3646: 'bV4ClrUsed': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(840): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(841): error C3646: 'bV4ClrImportant': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(841): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(842): error C3646: 'bV4RedMask': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(842): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(843): error C3646: 'bV4GreenMask': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(843): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(844): error C3646: 'bV4BlueMask': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(844): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(845): error C3646: 'bV4AlphaMask': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(845): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(846): error C3646: 'bV4CSType': unknown override specifier
+c:\program files (x86)\windows kits\8.1\include\um\wingdi.h(846): fatal error C1003: error count exceeds 100; stopping compilation
+  Consola.cpp
+c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\consola.cpp(156): error C2664: 'HMODULE GetModuleHandleA(LPCSTR)': cannot convert argument 1 from 'const wchar_t [13]' to 'LPCSTR'
+  c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\consola.cpp(156): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\consola.cpp(157): error C2664: 'HMODULE GetModuleHandleA(LPCSTR)': cannot convert argument 1 from 'const wchar_t [13]' to 'LPCSTR'
+  c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\consola.cpp(157): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\consola.cpp(158): error C2664: 'HMODULE GetModuleHandleA(LPCSTR)': cannot convert argument 1 from 'const wchar_t [13]' to 'LPCSTR'
+  c:\users\mbcrocci\source\repos\trabalhopoo\trabalhopoo\consola.cpp(158): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+  Generating Code...
+  Compiling...
+  Game.cpp
+  Generating Code...
+  Compiling...
+  main.cpp
   Generating Code...

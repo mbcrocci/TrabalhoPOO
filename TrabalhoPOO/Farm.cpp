@@ -31,3 +31,8 @@ void Farm::level_up ()
 	level_++;
 	n_coins_++;
 }
+
+std::string Farm::getString()
+{
+	return "F";
+}

@@ -27,3 +27,8 @@ void Tower::level_up ()
 	attack_++;
 	level_++;
 }
+
+std::string Tower::getString()
+{
+	return "T";
+}

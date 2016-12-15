@@ -1,7 +1,7 @@
 #pragma once
-#include "Item.h"
+#include "Trait.h"
 class Student :
-	public Item
+	public Trait
 {
 public:
 	Student ();

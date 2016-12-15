@@ -1,10 +1,12 @@
 #pragma once
-#include <chrono>
-#include <thread>
+//#include <chrono>
+//#include <thread>
+#include <memory>
 
-#include "Command.h"
-#include "Colony.h"
-#include "Map.h"
+#include "Consola.h"
+
+#include "InputHandler.h"
+#include "World.h"
 
 #define MS_PER_FRAME 16
 
@@ -13,6 +15,12 @@ class Game
 public:
 	Game ();
 	~Game ();
+
+	int getTick () const;
+
+	void loadInitFile ( std::string );
+
+	void executeCommand ( std::vector<std::string> );
 
 	void init (); // run before starting game loop
 				  // where config happens
@@ -23,9 +31,15 @@ public:
 	void render (); // draws the game
 	
 private:
-	Map map_;
-	Command command_;
-	Colony colony_;
+	int tick_;
+	InputHandler input_handler_;
+	std::shared_ptr<World> world_ = nullptr;
+
+	std::map<int, int> colony_colors_ = {
+		{ 0, Consola::VERDE_CLARO },
+		{ 1, Consola::VERMELHO_CLARO },
+		{ 2, Consola::AZUL_CLARO },
+	};
 
 };
 

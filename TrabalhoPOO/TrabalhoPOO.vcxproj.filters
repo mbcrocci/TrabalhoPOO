@@ -13,17 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Commands">
-      <UniqueIdentifier>{b32c080d-d1fa-409b-9d72-5f9a1ec018c3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Commands">
-      <UniqueIdentifier>{562d85db-4fca-4530-b835-ac89b48efadc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Entities">
       <UniqueIdentifier>{f5007406-8d4c-4947-a3a9-a004bc6881e5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Entities\Items">
-      <UniqueIdentifier>{df91796c-068f-49bd-8caf-677b3d9e0f39}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Entities\Buildings">
       <UniqueIdentifier>{69b55fa8-4a6e-473c-90a5-1842c08fc853}</UniqueIdentifier>
@@ -31,11 +22,14 @@
     <Filter Include="Source Files\Entities">
       <UniqueIdentifier>{77c0a2de-87d6-49a3-a324-89486acf9175}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Entities\Items">
-      <UniqueIdentifier>{acfd05e8-a605-4c0c-bbf1-449b5fba3890}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Entities\Buildings">
       <UniqueIdentifier>{b4d87eda-e270-4b76-ad17-4e8a21852e32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities\Traits">
+      <UniqueIdentifier>{acfd05e8-a605-4c0c-bbf1-449b5fba3890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Traits">
+      <UniqueIdentifier>{df91796c-068f-49bd-8caf-677b3d9e0f39}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -52,46 +46,22 @@
       <Filter>Source Files\Entities\Buildings</Filter>
     </ClCompile>
     <ClCompile Include="Armor.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
-    </ClCompile>
-    <ClCompile Include="BuildingAggression.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
-    </ClCompile>
-    <ClCompile Include="BuildingSeeker.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
+      <Filter>Source Files\Entities\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Flag.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
-    </ClCompile>
-    <ClCompile Include="HealthPot.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
-    </ClCompile>
-    <ClCompile Include="MonsterAggression.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
-    </ClCompile>
-    <ClCompile Include="MonsterSeeker.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
-    </ClCompile>
-    <ClCompile Include="MoreHealth.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
+      <Filter>Source Files\Entities\Traits</Filter>
     </ClCompile>
     <ClCompile Include="SecondChance.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
+      <Filter>Source Files\Entities\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Student.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
-    </ClCompile>
-    <ClCompile Include="ToughSkin.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
+      <Filter>Source Files\Entities\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Sword.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
+      <Filter>Source Files\Entities\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Walker.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
-    </ClCompile>
-    <ClCompile Include="Dagger.cpp">
-      <Filter>Source Files\Entities\Items</Filter>
+      <Filter>Source Files\Entities\Traits</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
@@ -99,23 +69,44 @@
     <ClCompile Include="Consola.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ListCommand.cpp">
-      <Filter>Source Files\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Monster.cpp">
-      <Filter>Source Files\Entities</Filter>
-    </ClCompile>
     <ClCompile Include="World.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Colony.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DimCommand.cpp">
-      <Filter>Source Files\Commands</Filter>
-    </ClCompile>
     <ClCompile Include="InputHandler.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Beeing.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Profile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Aggression.cpp">
+      <Filter>Source Files\Entities\Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildSeeker.cpp">
+      <Filter>Source Files\Entities\Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="HardSkin.cpp">
+      <Filter>Source Files\Entities\Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="HeatSeeker.cpp">
+      <Filter>Source Files\Entities\Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="Knife.cpp">
+      <Filter>Source Files\Entities\Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="Ecologic.cpp">
+      <Filter>Source Files\Entities\Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="Medicine.cpp">
+      <Filter>Source Files\Entities\Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="Superior.cpp">
+      <Filter>Source Files\Entities\Traits</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -129,58 +120,28 @@
       <Filter>Header Files\Entities\Buildings</Filter>
     </ClInclude>
     <ClInclude Include="Armor.h">
-      <Filter>Header Files\Entities\Items</Filter>
-    </ClInclude>
-    <ClInclude Include="BuildingAggression.h">
-      <Filter>Header Files\Entities\Items</Filter>
-    </ClInclude>
-    <ClInclude Include="BuildingSeeker.h">
-      <Filter>Header Files\Entities\Items</Filter>
-    </ClInclude>
-    <ClInclude Include="Dagger.h">
-      <Filter>Header Files\Entities\Items</Filter>
+      <Filter>Header Files\Traits</Filter>
     </ClInclude>
     <ClInclude Include="Flag.h">
-      <Filter>Header Files\Entities\Items</Filter>
-    </ClInclude>
-    <ClInclude Include="HealthPot.h">
-      <Filter>Header Files\Entities\Items</Filter>
-    </ClInclude>
-    <ClInclude Include="MonsterAggression.h">
-      <Filter>Header Files\Entities\Items</Filter>
-    </ClInclude>
-    <ClInclude Include="MonsterSeeker.h">
-      <Filter>Header Files\Entities\Items</Filter>
-    </ClInclude>
-    <ClInclude Include="MoreHealth.h">
-      <Filter>Header Files\Entities\Items</Filter>
+      <Filter>Header Files\Traits</Filter>
     </ClInclude>
     <ClInclude Include="SecondChance.h">
-      <Filter>Header Files\Entities\Items</Filter>
+      <Filter>Header Files\Traits</Filter>
     </ClInclude>
     <ClInclude Include="Student.h">
-      <Filter>Header Files\Entities\Items</Filter>
+      <Filter>Header Files\Traits</Filter>
     </ClInclude>
     <ClInclude Include="Sword.h">
-      <Filter>Header Files\Entities\Items</Filter>
-    </ClInclude>
-    <ClInclude Include="ToughSkin.h">
-      <Filter>Header Files\Entities\Items</Filter>
+      <Filter>Header Files\Traits</Filter>
     </ClInclude>
     <ClInclude Include="Walker.h">
-      <Filter>Header Files\Entities\Items</Filter>
+      <Filter>Header Files\Traits</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Command.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Consola.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ListCommand.h">
-      <Filter>Header Files\Commands</Filter>
     </ClInclude>
     <ClInclude Include="World.h">
       <Filter>Header Files</Filter>
@@ -191,19 +152,43 @@
     <ClInclude Include="Building.h">
       <Filter>Header Files\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Header Files\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="Monster.h">
-      <Filter>Header Files\Entities</Filter>
-    </ClInclude>
     <ClInclude Include="Colony.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DimCommand.h">
-      <Filter>Header Files\Commands</Filter>
-    </ClInclude>
     <ClInclude Include="InputHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Beeing.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Profile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Aggression.h">
+      <Filter>Header Files\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildSeeker.h">
+      <Filter>Header Files\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="HardSkin.h">
+      <Filter>Header Files\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="HeatSeeker.h">
+      <Filter>Header Files\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="Knife.h">
+      <Filter>Header Files\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="Ecologic.h">
+      <Filter>Header Files\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="Medicine.h">
+      <Filter>Header Files\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="Superior.h">
+      <Filter>Header Files\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="Trait.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

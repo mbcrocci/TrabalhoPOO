@@ -11,6 +11,7 @@ public:
 	void effect () override;
 	void repair () override;
 	void level_up() override;
+	std::string getString () override;
 
 private:
 	int n_coins_;
